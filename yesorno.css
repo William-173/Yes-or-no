@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Making the buttons round */
+    transition: all 0.3s ease;
+}
+
+.yes {
+    background-color: white;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.no {
+    background-color: gray;
+    color: white;
+}
+
+.yes:hover {
+    background-color: pink;
+    color: white;
+}
+
+.no:hover {
+    background-color: darkgray;
+    color: black;
+}
+
+.yes:hover .heart {
+    display: block;
+    animation: heart 0.5s ease-in-out infinite;
+}
+
+.heart {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    color: pink;
+    animation: heartMove 1s ease infinite;
+}
+
+@keyframes heartMove {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+    100% { transform: translate(-20px, -40px); }
+}
+
+@keyframes heart {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
